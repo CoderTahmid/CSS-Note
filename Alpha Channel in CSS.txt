@@ -1,0 +1,14 @@
+/* Alpha Channel */
+
+/*
+alpha channel diye muloto color'r opacity set kora hoy,
+rgba(red,green,blue,alpha)
+ekhane red,green,blue,alpha sobgula ek ekta channel
+alpha'r range 0-1 
+*/
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(0,0,255, 0.5)
+}

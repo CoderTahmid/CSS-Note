@@ -1,0 +1,17 @@
+Color system in CSS
+
+red + green = yellow
+red + blue = pink
+blue + green = cyan
+
+color ke CSS e muloto rgb(r,g,b) dara prokash kore. 
+R = red
+G = Green
+B = Blue
+rgb(0,0,0) theke rgb(255,255,255) porjonto possible, bracket e basically coordinates dewa hoy, jek kon color ki poriman nibo tar.
+
+rgb(255,0,0) = only red color
+rgb(0,255,0) = only green color
+rgb(0,0,255) =  only blue color
+rgb(255,255,0) = mixture of red and green colors
+rgb(255,0,255) = mixture of red and blue colors

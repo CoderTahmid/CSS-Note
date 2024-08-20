@@ -1,0 +1,71 @@
+/* Media Queries */ 
+
+/*
+Media Queries is basically used for to build responsive websites
+*/
+
+div{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+}
+@media (width : 600px){
+    #box1{
+        background-color: rebeccapurple;
+    }
+    /*
+    ei code e bola hoacche
+    jodi screen size e width 600px hoy
+    tahole oi div ta rebeccapurple hoye jabe
+    */
+}
+
+@media (min-width : 600px){
+    #box1{
+        background-color: red;
+    }
+    /*
+    ei code e
+    display size 600 ba er upre hoile div gular color red hoye jabe
+    */
+}
+@media (max-width : 500px){
+    #box1{
+        background-color: green;
+    }
+    /*
+    ekhane display'r width jokhon 0 to 500 px
+    tokhon div'r color green hbe
+    */
+}
+
+/*Media query uses in range */
+
+@media (min-width : 200px) and (max-width : 400px){
+    #box2{
+        background-color: red;
+    }
+    /*
+    it's mean width screen width jokhon 200px theke 400px er moddhe thakbe
+    tokhon ei box2 ta red hbe
+    */
+}
+
+
+/*********************HTML Code that are supposed to link with it*********************/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div id="box1">box1</div>
+    <br>
+    <div id="box2">box2</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        input{
+            height: 50px;
+            width: 200px;
+        }
+        input:focus{
+            color: red;
+            background-color: green;
+            /*
+            ete kore oi inbox e field e likhar time e text gulah red hoye jabe,
+            focus diye muloto bujhay je
+            kono ekta input box ke click korle seta arki focus e asshe likhar jonne,
+            general designing jeta default bhabe dewa thake ta holo je oi input field ke click kore,
+            tar border ektu increase hoy arki
+            kintu ei focus obostha'y onek kisu e kora possible  
+            */
+        }
+        li{
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+        }
+        .first-list:first-child{
+            background-color: blue;
+            /*
+            this is how we can style first child of any parent
+            */
+        }
+        .first-list:last-child{
+            background-color: red;
+            /*
+            this is how we can style last child of any parent
+            */
+        }
+        .sec-list:nth-child(2n){
+            background-color: crimson;
+            /*
+            ekhane kono parent'r 2n-th child gula ke color kora hoise,
+            orthat 2,4,6...th box gula ke
+            */
+        }
+        .third-list:nth-child(2n+1){
+            background-color: crimson;
+            /*
+            ekhane kono parent'r (2n+1)th child gula ke color kora hoise,
+            orthat 1,3,5...th box gula ke 
+            */
+        }
+        h1::after{
+            content: '.pdf'; /* eta every heading'r por ".pdf" text ta add korbe*/
+            font-size: 40px;
+            background-color: red;
+            color: yellow;
+        }
+        h1::before{
+            content: 'start'; /* eta every content'r age 'start' text ta add korbe */
+            font-size: 70px;
+            color: aquamarine;
+            background-color: beige;
+        }
+        p{
+            font-size: 50px;
+        }
+        p::first-letter{
+            font-size: 2em;
+            /*
+            every paragraph'r first latter e design add korar jonne
+            */
+        }
+        p::first-line{
+            background-color: red;
+            /*
+            every paragraph'r first line e design add korar jonne
+            */
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <br>
+    <ul>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+        <li class="first-list"></li>
+    </ul>
+    <br>
+    <hr>
+    <ul>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+        <li class="sec-list"></li>
+    </ul>
+    <br>
+    <hr>
+    <ul>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+        <li class="third-list"></li>
+    </ul>
+    <br>
+    <hr>
+    <h1>heading 1</h1>
+    <h1>heading 2</h1>
+    <h1>heading 3</h1>
+    <br>
+    <hr>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora delectus cupiditate doloremque, fugiat reiciendis! Cumque, aliquam sed nemo odio, dolor fugit nesciunt atque eveniet tenetur quam veniam iusto? Ex.10</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora delectus cupiditate doloremque, fugiat reiciendis! Cumque, aliquam sed nemo odio, dolor fugit nesciunt atque eveniet tenetur quam veniam iusto? Ex.10</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora delectus cupiditate doloremque, fugiat reiciendis! Cumque, aliquam sed nemo odio, dolor fugit nesciunt atque eveniet tenetur quam veniam iusto? Ex.10</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora delectus cupiditate doloremque, fugiat reiciendis! Cumque, aliquam sed nemo odio, dolor fugit nesciunt atque eveniet tenetur quam veniam iusto? Ex.10</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora delectus cupiditate doloremque, fugiat reiciendis! Cumque, aliquam sed nemo odio, dolor fugit nesciunt atque eveniet tenetur quam veniam iusto? Ex.10</p>
+</body>
+</html>

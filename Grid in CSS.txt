@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .item{
+            border: 2px solid rgb(20, 220, 67);
+        }
+        .container1{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            /*
+            every column'r width hbeh 200px and total 4ta column e divided hbeh
+            */
+        }
+        .container2{
+            display: grid;
+            grid-template-columns: 100px 200px 300px 400px;
+            /*
+            first column'r width 100px 2nd column'r width 200px
+            3rd column'r widh 300px and last column'r width 400px
+            ebhabe kore total 4 ta column e divide hbeh
+            */
+        }
+        .container3{
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            /*
+            er mane hocche total 4 ta column create hbeh
+            and every column'r width hbeh 200px
+            */
+        }
+        .container4{
+            display: grid;
+            grid-template-columns: repeat(2, 200px) 400px 50px;
+            /*
+            prothom 2 ta 200px
+            3rd ta 400px
+            4th ta 50px
+            ebhabe divide hbe
+            */
+        }
+        .container5{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /*
+            er mane hocche total 4 ta column hbeh
+            and emon hbeh create hbe jeno egula 
+            vw er full jayga niye ney
+            */
+        }
+        .container6{
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            /*
+            first column 200px 
+            last column 200px 
+            er por ja jayga thake ta purata nibe 2nd colummn
+            */
+        }
+        .container7{
+            display: grid;
+            grid-template-columns: 200px 200px;
+            justify-content: center;
+            /*
+            just same as flex-box concept
+            mone rakhar bishoy hocche
+            display: grid; set koreo ei justify-content or align-item ei property gula use kora jay
+            */
+        }
+        .container8{
+            display: grid;
+            grid-template-columns: 200px 200px;
+            justify-content: space-around;
+            /*
+            just same as flex-box concept
+            */
+        }
+        .container9{
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            column-gap: 90px;
+            /*
+            every column'r moddhe 90px kore gap hbeh
+            */
+        }
+        .container10{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .container10 > #item-1{
+            grid-row: span 10;
+            /*
+            so ekhane jeta hocche ta holo je,
+            item-1 er row'r dik theke span hoiseh 10 amount
+            10 amount bolte like 10 ta box row bora bor jei proiman jayga nibe 
+            shei poriman jayga newa
+            */
+        }
+        .container11{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .container11 > #item-1{
+            grid-row: span 10;
+            /*
+            so ekhane ektu unexpected output dekha jacche,
+            concept mote item-1 ta span houar kotha and about total 10 ta row'r space newa kotha,
+            kintuuu!
+            ekhhane age jei kahini hbe ta holo je 
+            first e grid ta column bora bor 5 ta bhabe bhag hbe,
+            then sekhan theke item-1 ke pick kora hbeh
+            pick kore sheta ke span kora hbe,
+            kintu emon bhabe span kora hobe jate kore total column number 5 e thake,
+            muloto ei colmun number maintain korar jonnei 
+            item-1 10 ta row shoman space nibe na
+            */
+        }
+        .container12{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            /*
+            ekhane container12 ta total 10 ta row poriman space nibe 
+            ei grid-template-row: repeat(10, 1fr);
+            set kora'y
+            */
+        }
+        .container12 > #item-1{
+            grid-row: span 10;
+            /*
+            ekhn ekhane item-1 ta successfully 10 row porjonto repeat hbe,
+            karon --> 
+            jodio ekhane porjapto items nai, 
+            but ekhane enough space ase oi obdi span houar, 
+            ty e
+            */
+        }
+        .container13{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+        .container13 > #item-1{
+            grid-row: span 10;
+            /*
+            accha ekhane gap add korar por dekha jacche je item-1 ta expectation theke beshi e span hoiseh,
+            er karon hocche je,
+            first of all item-1 5 ta row shoman span hbeh,
+            eta true 
+            oi gap property ta command kore dilei dekhte parbo je item-1 5 ta row shoman span hoiseh,
+            but gap property ta dewar por dekha jacche je 
+            oita 5 ta row'r theke beshi e span hoise,
+            ekhane gap property ta add korar karone emon hoiseh,
+            let's break it more...
+            item-1 ke koyta row'r shoman jayga dewa hoise?
+            grid-row: span 10;
+            ei line theke bujha jay je eke total 10 ta row'r soman jayga dewa hosieh
+            so ei 10 ta row'r majhe total gap hbe 9 ta 
+            1st row
+            gap 1
+            2nd row
+            gap 2
+            3rd row
+            gap 3
+            4th row
+            gap 4
+            5th row
+            gap 5 
+            6th row
+            gap 6
+            7th row 
+            gap 7
+            8th row
+            gap 8
+            9th row 
+            gap 9
+            10th row
+            so 9*10 = 90px extra gap dekha jabe!
+            */
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Explore grid layout : 2D layout</h2>
+
+    <div class="container1">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container2">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container3">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container4">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container5">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container6">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container7">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container8">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container9">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+        <div class="item">item - 8</div>
+        <div class="item">item - 9</div>
+        <div class="item">item - 10</div>
+        <div class="item">item - 11</div>
+        <div class="item">item - 12</div>
+        <div class="item">item - 13</div>
+        <div class="item">item - 14</div>
+        <div class="item">item - 15</div>
+        <div class="item">item - 16</div>
+        <div class="item">item - 17</div>
+        <div class="item">item - 18</div>
+        <div class="item">item - 19</div>
+        <div class="item">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container10">
+        <div class="item" id="item-1">item - 1</div>
+        <div class="item" id="item-2">item - 2</div>
+        <div class="item" id="item-3">item - 3</div>
+        <div class="item" id="item-4">item - 4</div>
+        <div class="item" id="item-5">item - 5</div>
+        <div class="item" id="item-6">item - 6</div>
+        <div class="item" id="item-7">item - 7</div>
+        <div class="item" id="item-8">item - 8</div>
+        <div class="item" id="item-9">item - 9</div>
+        <div class="item" id="item-10">item - 10</div>
+        <div class="item" id="item-11">item - 11</div>
+        <div class="item" id="item-12">item - 12</div>
+        <div class="item" id="item-13">item - 13</div>
+        <div class="item" id="item-14">item - 14</div>
+        <div class="item" id="item-15">item - 15</div>
+        <div class="item" id="item-16">item - 16</div>
+        <div class="item" id="item-17">item - 17</div>
+        <div class="item" id="item-18">item - 18</div>
+        <div class="item" id="item-19">item - 19</div>
+        <div class="item" id="item-20">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container11">
+        <div class="item" id="item-1">item - 1</div>
+        <div class="item" id="item-2">item - 2</div>
+        <div class="item" id="item-3">item - 3</div>
+        <div class="item" id="item-4">item - 4</div>
+        <div class="item" id="item-5">item - 5</div>
+        <div class="item" id="item-6">item - 6</div>
+        <div class="item" id="item-7">item - 7</div>
+        <div class="item" id="item-8">item - 8</div>
+        <div class="item" id="item-9">item - 9</div>
+        <div class="item" id="item-10">item - 10</div>
+        <div class="item" id="item-11">item - 11</div>
+        <div class="item" id="item-12">item - 12</div>
+        <div class="item" id="item-13">item - 13</div>
+        <div class="item" id="item-14">item - 14</div>
+        <div class="item" id="item-15">item - 15</div>
+        <div class="item" id="item-16">item - 16</div>
+        <div class="item" id="item-17">item - 17</div>
+        <div class="item" id="item-18">item - 18</div>
+        <div class="item" id="item-19">item - 19</div>
+        <div class="item" id="item-20">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container12">
+        <div class="item" id="item-1">item - 1</div>
+        <div class="item" id="item-2">item - 2</div>
+        <div class="item" id="item-3">item - 3</div>
+        <div class="item" id="item-4">item - 4</div>
+        <div class="item" id="item-5">item - 5</div>
+        <div class="item" id="item-6">item - 6</div>
+        <div class="item" id="item-7">item - 7</div>
+        <div class="item" id="item-8">item - 8</div>
+        <div class="item" id="item-9">item - 9</div>
+        <div class="item" id="item-10">item - 10</div>
+        <div class="item" id="item-11">item - 11</div>
+        <div class="item" id="item-12">item - 12</div>
+        <div class="item" id="item-13">item - 13</div>
+        <div class="item" id="item-14">item - 14</div>
+        <div class="item" id="item-15">item - 15</div>
+        <div class="item" id="item-16">item - 16</div>
+        <div class="item" id="item-17">item - 17</div>
+        <div class="item" id="item-18">item - 18</div>
+        <div class="item" id="item-19">item - 19</div>
+        <div class="item" id="item-20">item - 20</div>
+    </div>
+    <br><hr>
+    <div class="container13">
+        <div class="item" id="item-1">item - 1</div>
+        <div class="item" id="item-2">item - 2</div>
+        <div class="item" id="item-3">item - 3</div>
+        <div class="item" id="item-4">item - 4</div>
+        <div class="item" id="item-5">item - 5</div>
+        <div class="item" id="item-6">item - 6</div>
+        <div class="item" id="item-7">item - 7</div>
+        <div class="item" id="item-8">item - 8</div>
+        <div class="item" id="item-9">item - 9</div>
+        <div class="item" id="item-10">item - 10</div>
+        <div class="item" id="item-11">item - 11</div>
+        <div class="item" id="item-12">item - 12</div>
+        <div class="item" id="item-13">item - 13</div>
+        <div class="item" id="item-14">item - 14</div>
+        <div class="item" id="item-15">item - 15</div>
+        <div class="item" id="item-16">item - 16</div>
+        <div class="item" id="item-17">item - 17</div>
+        <div class="item" id="item-18">item - 18</div>
+        <div class="item" id="item-19">item - 19</div>
+        <div class="item" id="item-20">item - 20</div>
+    </div>
+</body>
+</html>

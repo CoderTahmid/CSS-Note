@@ -1,0 +1,37 @@
+/***Selectors in CSS***/
+
+/*Universal Selector*/
+*{ /*eta diye oi document'r shob kisur color  blue hoye jabe*/
+    color: blue;
+}
+
+/*Element selector*/
+h1{
+    color: green;
+}
+
+h1, h2, h3{ /*ebhabe ek sathe 3 ta element ke color dewa jay*/
+    color: black;
+}
+
+button{
+    color: brown;
+}
+
+/*Id selector*/
+#headingOne{
+    color: yellow;
+}
+
+#headingTwo{
+    color: chocolate;
+}
+
+#headingThree{
+    color: magenta;
+}
+
+/*Class selector*/
+.myClass{
+    background-color: gold;
+}

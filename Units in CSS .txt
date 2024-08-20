@@ -1,0 +1,68 @@
+/* Units in CSS */
+
+/*
+percentage(%) 
+eta parent object'r upre depend kore ei unit ta kaj koreh,
+40% bola hoile parent object'r 40% jayga nibe 
+*/
+
+/*
+em
+ei em o parent element'r upre depend kore hoy,
+2em = 2times of parent font size
+muloto joto em dewa hbe toto gun hbeh parent font size'r sathe
+em other dimension'r (Height, Width, Margin, Padding, Border) khetreo use kora jay 
+but HWMPB er khetre eta ektu different bhabe kaj koreh, font size'r moto kaj kore na,
+font size e jemon 2em dile 2gun hoye jay, HWMPB er khetre emonta hoy na
+*/
+
+/*
+rem
+rem hocche muloto root em,
+orthat oi page'r sobche bairer jei text ba bairer parent(generally HTML) thakbe tar upre depend korbe font size
+page kono tag'r bhitore kono text na lekhle tar size 16px hoy normally
+it's mean 5rem = 5*16 ( 80 ) 
+80 size hbe
+*/
+
+/*
+vw
+vw is equal to 1% of the width of the browser window size.
+mane browser window tar joto tuk width dekha jacche tar upre depend korbe ei unit ta
+*/
+
+/*
+vh
+vh is equal to 1% of the width of the browser window size.
+mane browser window tar joto tuk height dekha jacche tar upre dependd korbe ei unit ta
+*/
+
+/*
+vmin vmax
+er mane hoocche 
+ekta phone'r example newa jak
+amar phone ta lomba shaped orthat prhone jei height ta hbe sheta ke vmax bola hocche
+on the other hand 
+phone width jeta sehta ke vmin bola hocche
+*/
+
+
+/*percentage(%) Unit*/
+#div1{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+#div2{
+    height: 50px;
+    width: 100%;
+    background-color: red;
+}
+
+/*em unit*/
+#div3{
+    font-size: 50px;
+}
+#div4{
+   font-size: 2em;
+}
