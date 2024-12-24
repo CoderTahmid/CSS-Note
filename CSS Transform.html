@@ -1,0 +1,128 @@
+/* CSS Transform */
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <style>
+      /*Transform is used to apply 2D and 3D transformation to an element*/
+      div {
+        height: 70px;
+        width: 70px;
+        border: 2px solid black;
+        background-color: blueviolet;
+      }
+
+      /**Rotate property**/
+      #box1 {
+        transform: rotate(90deg);
+        /*
+        ei box ta 90 degree clock-wise rotate korse
+        */
+      }
+      #box2 {
+        transform: rotate(45deg);
+        /*
+        ei box ta 45 degree clock-wise rotate korse
+        */
+      }
+
+      /**Scale property**/
+      #box3 {
+        margin-top: 50px;
+        margin-left: 60px;
+        transform: scale(2);
+        /*
+        ekhane oi element tar size 2 times hoye jabe
+        */
+      }
+      #box4 {
+        margin-top: 60px;
+        transform: scale(1, 2);
+        /*
+        scale(x,y,z) ei akare thake muloto 
+        ei code e x axis borabor scale 1 dewa hoise 
+        ty er width bare nai
+        and y axis borabor scale 2 dewa hoise 
+        ty er height 2gun hoise
+        */
+      }
+
+      /**Translate property**/
+      #box5:hover {
+        transition-property: all;
+        transition-duration: 2s;
+        transform: translate(50px);
+        /*
+        ekhane transform: translate(50px); set kora mane hocche,
+        ei element'r upre hover korle element ta 50px positive x axis borabor jabe
+        */
+      }
+      #box6 {
+        margin-left: 100px;
+      }
+      #box6:hover {
+        transition-property: all;
+        transition-duration: 2s;
+        transform: translateX(-50px);
+        /*
+        ekhane transform: translateX(-50px); set kora mane hocche,
+        ei element'r upre hover korle element ta 50px negetive x axis borabor jabe
+        */
+      }
+      #box7:hover {
+        transition-property: all;
+        transition-duration: 2s;
+        transform: translateY(-50px);
+        /*
+        ekhane transform: translateY(-50px); set kora mane hocche,
+        ei element'r upre hover korle element ta 50px positive y axis borabor jabe
+        */
+      }
+      #box8:hover {
+        transition-property: all;
+        transition-duration: 2s;
+        transform: translate(50px, 50px);
+        /*
+        transform: translate(x,y,z);
+        ei akar eo prokash kora jay
+        ei code e 
+        positive x axis borabor 50px jabe and negetive y axis borabor 50px jabe
+        */
+      }
+
+      /**Skew property**/
+      #box9:hover {
+        transition-property: all;
+        transition-duration: 2s;
+        transform: skew(45deg);
+        /*
+        ekhane transform:skew() set korle muloto ja hoy,
+        element tar 2 korno borabor tan diye eta ke kinda rombosh shape dewa hoy
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">box1</div>
+    <br />
+    <div id="box2">box2</div>
+    <br />
+    <div id="box3">box3</div>
+    <br />
+    <div id="box4">box4</div>
+    <br />
+    <div id="box5">box5</div>
+    <br />
+    <div id="box6">box6</div>
+    <br />
+    <div id="box7">box7</div>
+    <br />
+    <div id="box8">box8</div>
+    <br />
+    <div id="box9">box9</div>
+  </body>
+</html>
