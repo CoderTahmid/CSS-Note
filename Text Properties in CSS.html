@@ -1,0 +1,266 @@
+/***Text Properties***/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      /*Text Align*/
+      #heading1 {
+        text-align: left;
+      }
+      #heading2 {
+        text-align: center;
+      }
+      #heading3 {
+        text-align: right;
+      }
+
+      /*Text Decoration*/
+      #p {
+        text-decoration: blue underline; /*eta ekta blue underline create korbe*/
+      }
+      #p2 {
+        text-decoration: line-through;
+      }
+      #p3 {
+        text-decoration: overline;
+      }
+      #p4 {
+        text-decoration: underline;
+      }
+
+      #anchorTag {
+        text-decoration: none; /*anchor tag use korle by default web e link text'r niche ekta dag ashe, shei dag remove korar jonne "none" dile ta remove hbe*/
+      }
+      /*search on google "text decoration CSS" to find more of them*/
+
+      /*Font weight property*/
+      /*font weight diye muloto ekta text koto tuk dark o light dekha jabe ta thik kora hoy*/
+      /*
+      ei dark and light'r ekta shima ase and ta holo 100-900,
+      100 sobche kom bold ba dark,
+      900 sobche beshi bold ba dark
+      */
+      #heading4 {
+        font-weight: normal; /*ei h1 ta garo na hoye normal e print hbe*/
+        font-weight: 100; /*chaile ebhabe number diyeo likha jay*/
+      }
+      #para {
+        font-weight: bold;
+      }
+      #para2 {
+        font-weight: bolder; /*bold theke ektu beshi bold hbe*/
+      }
+      h3 {
+        font-weight: lighter;
+      }
+
+      /*Font family or style*/
+      #para3 {
+        font-family: "Segoe UI";
+      }
+      #para4 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif; /*ekhane onek gulo font lekha hoise, karon first font kaj na korle tar porer font ta kaj korbe*/
+      }
+
+      /*Font size*/
+      /*here 96 px = 1 inch*/
+      #para5 {
+        font-size: 40px;
+      }
+      #para6 {
+        font-size: 30px;
+      }
+
+      /*Line height property*/
+      /*eta diye muloto ek line theke next line'r distance kemon hbe ta thik kore*/
+      #para7 {
+        line-height: 2px;
+      }
+      #para8 {
+        line-height: 50px;
+      }
+      #para9 {
+        line-height: normal;
+      }
+
+      /*Text transform property*/
+      #para10 {
+        text-transform: uppercase;
+      }
+      #para11 {
+        text-transform: lowercase;
+      }
+      #para12 {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading1">Left text align check</h1>
+    <h1 id="heading2">center text align check</h1>
+    <h1 id="heading3">right text align check</h1>
+
+    <p id="p">Blue underline check</p>
+    <p id="p2">line-through check</p>
+    <p id="p3">overline check</p>
+    <p id="p4">underline check</p>
+
+    <a href="https://translate.google.com/" id="anchorTag">
+      google translate link underline remove checking
+    </a>
+
+    <h1 id="heading4">Normal font weight check</h1>
+    <p id="para">Bold font weight check</p>
+    <p id="para2">bolder font weight check</p>
+    <h3>lighter font weight check</h3>
+
+    <p id="para3">
+      Segoe UI font check --> Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Quasi officiis commodi ipsa obcaecati corporis, sapiente
+      magnam quisquam iure dolor vitae asperiores debitis sit sequi blanditiis
+      minus cumque unde soluta possimus!
+    </p>
+    <p id="para4">
+      system-ui font check --> Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Consequuntur debitis ab repellendus eveniet fugit eaque
+      expedita ducimus maxime tempore atque enim, nisi et harum suscipit sunt
+      explicabo odio! Voluptatibus, amet?
+    </p>
+
+    <p id="para5">pixel testing 40px</p>
+    <p id="para6">pixel testing 30px</p>
+
+    <p id="para7">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quod, fugit
+      ipsam, non cum a officia expedita quos quae quo voluptatibus ab. Cumque
+      non veritatis earum officiis fuga, porro similique. Laudantium amet error
+      porro at eaque officiis impedit aperiam commodi labore non, ducimus, nobis
+      laboriosam recusandae atque veniam, consequuntur quos placeat maiores
+      architecto molestiae ab soluta iusto totam! Porro, vel! Alias ab,
+      voluptatibus qui natus laborum magni ipsam dicta id eligendi cum
+      consequuntur corporis sequi atque assumenda molestiae reprehenderit quam
+      illo rerum magnam nesciunt dignissimos culpa tempora doloremque. Natus,
+      assumenda! Ducimus consequatur ut deleniti nemo fugit modi odit voluptate
+      omnis reprehenderit provident rem, aspernatur fuga culpa a tenetur
+      voluptatem nostrum inventore sint quibusdam eum mollitia. Libero inventore
+      laborum tenetur consequatur? Accusantium iste reiciendis delectus
+      obcaecati quaerat quidem facere voluptatem, ad explicabo impedit quis
+      veritatis quo voluptatibus tenetur dolore mollitia facilis et molestiae
+      consectetur aspernatur! Libero nulla repellat quibusdam explicabo
+      consectetur. Voluptatibus aspernatur minus excepturi ut temporibus,
+      deleniti ratione quas velit dolorem culpa molestias illum inventore ea
+      corrupti magnam suscipit. Expedita rem illum quaerat nisi unde aut
+      accusamus esse nemo. Odio. In fugit praesentium tenetur facilis pariatur
+      voluptatem maiores quis id suscipit, nobis ut hic quibusdam sapiente
+      officiis ullam, animi minima, facere quidem! Mollitia, eius cupiditate
+      provident aliquid repudiandae odio pariatur! Eius consequuntur tempore,
+      minus nostrum nisi asperiores mollitia explicabo temporibus eos repellat
+      reiciendis consequatur provident optio soluta assumenda sit aperiam nemo
+      facilis quae maxime laborum quis, eum voluptates! Sequi, quisquam.
+      Consequuntur quasi quo perspiciatis incidunt impedit, atque tempore soluta
+      ab dignissimos asperiores corrupti, saepe optio est accusantium vitae?
+      Velit dicta unde odio alias non natus rerum delectus voluptate dolores
+      pariatur! Rerum mollitia nemo quod molestias adipisci soluta deserunt
+      odio! Perspiciatis nemo et officia ipsum facere, deleniti beatae
+      distinctio magnam reiciendis cum vitae sed, animi aperiam, magni quae!
+      Reiciendis, commodi iure.
+    </p>
+    <p id="para8">
+      line height check 50px --> Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Nihil dolorem iure ducimus dignissimos iste quo deleniti
+      ipsam blanditiis debitis, voluptatem odio doloremque quam alias
+      praesentium error tempore, eum eos quaerat. Architecto molestiae commodi
+      nostrum blanditiis impedit officia nisi odio voluptatem cum itaque sunt,
+      debitis perferendis deleniti esse repudiandae asperiores at ipsa fuga
+      quam! Nesciunt harum iure at maiores itaque blanditiis! Hic quos vel
+      minus, ad totam, nostrum cupiditate optio error alias quibusdam ipsam eos.
+      Numquam fugiat itaque, veritatis quibusdam suscipit maxime dignissimos
+      ipsa? Numquam asperiores nihil exercitationem, ad unde eum. Minima enim
+      ipsam praesentium aperiam dolorum quisquam quidem non, rerum nulla
+      consequatur excepturi nobis soluta eligendi necessitatibus, maiores eius!
+      Neque similique animi earum nesciunt inventore aspernatur illo magnam,
+      porro exercitationem? Architecto earum fugit ab itaque est ipsum beatae
+      perferendis. Voluptas, cum quibusdam molestiae voluptatem aperiam aliquam
+      magnam magni maiores obcaecati totam. Tempore, natus totam aperiam
+      repellendus explicabo esse quas aut. Quibusdam itaque doloribus
+      praesentium voluptatum consequatur consequuntur dicta facilis dolorem
+      repellendus consectetur culpa impedit at voluptatibus quis, et adipisci
+      laboriosam officiis modi deleniti commodi rerum minima cum aliquid!
+      Eveniet, perspiciatis. Ratione maiores consequatur officiis saepe culpa
+      sunt numquam unde id a quia doloribus, porro dolore provident, qui ducimus
+      placeat sequi eius. Voluptatibus magnam quia sequi repellat veniam id
+      cumque esse! Corporis natus sapiente eveniet nulla alias. Voluptate iusto
+      unde quisquam rerum earum amet tempora quo ab facilis aliquid aperiam non
+      sequi praesentium natus recusandae, dolor, quia impedit eos voluptatibus
+      nemo? Veniam enim repellat illum nulla, error sed dolore quae! Quos
+      veritatis nulla repudiandae vero incidunt soluta assumenda illo cupiditate
+      eum, sunt cumque iusto molestias praesentium, reiciendis quis. Vel,
+      cupiditate consectetur. Et harum cumque tempora aut culpa dolorum nesciunt
+      quidem sed amet iste doloremque fugiat nobis veniam deleniti ullam dolores
+      sint repellat quo assumenda, placeat hic? Laboriosam maiores dolorem quis
+      eius.
+    </p>
+    <p id="para9">
+      normal line height check --> Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Beatae eius inventore exercitationem rerum molestias
+      veritatis deserunt ea aliquam ipsam aperiam minima repellendus deleniti
+      quibusdam, et voluptatem? Error, hic ea! Fugit! Aut iste eligendi veniam
+      voluptas architecto vitae repellendus minus dicta sunt in porro
+      consectetur veritatis neque provident, corporis minima expedita impedit
+      nihil. Nemo nisi, necessitatibus nostrum alias a quo iusto? Labore,
+      maiores voluptatibus. Atque eaque nostrum sed. Nemo quibusdam earum
+      numquam labore iure error aliquam aut molestiae fugiat, sint voluptate,
+      laboriosam tenetur, corrupti dolores rerum cum ullam blanditiis? Nam,
+      consequuntur. Reiciendis quos quidem a fugiat perspiciatis! Eligendi,
+      deserunt dolorum? Exercitationem delectus vero doloremque distinctio, vel
+      autem eligendi similique in blanditiis, officiis recusandae est vitae nemo
+      expedita reprehenderit, nihil quas dolore. Quis, eos dolorem assumenda
+      provident earum ea dignissimos impedit optio nihil voluptatum deleniti
+      similique obcaecati harum illo! Exercitationem ullam hic blanditiis?
+      Eveniet dignissimos dolores veritatis porro asperiores. Aut, id maxime?
+      Voluptatibus, inventore facilis? Blanditiis placeat est ex mollitia
+      provident fuga exercitationem, consectetur dolore culpa commodi temporibus
+      assumenda cum eius autem incidunt error tempora similique nostrum? Aliquid
+      dolor explicabo asperiores est. Vitae earum accusamus quia minima, fuga
+      repudiandae, enim quas consectetur, explicabo error aspernatur doloribus
+      consequuntur architecto commodi laudantium! Aut itaque aperiam
+      praesentium, optio dolorem deleniti laborum labore perspiciatis quia
+      provident? Eos aliquid soluta libero? Sunt, vero possimus quas magnam ad
+      ipsum cumque molestiae et corporis dolore, nisi, sequi odit aut corrupti
+      ipsa doloremque mollitia inventore itaque eius magni quasi repudiandae?
+      Saepe magnam in eum facere veritatis similique rem quaerat, maiores,
+      provident quidem eos nisi. Impedit, accusamus, inventore culpa laboriosam
+      expedita ab numquam, consequuntur ipsum laborum iusto sunt obcaecati quod
+      veritatis. Officia culpa non quasi ducimus asperiores impedit nobis dolor
+      sint quaerat ea at autem molestiae unde dignissimos odit minus, maiores ad
+      cupiditate! Iure at maxime voluptates consectetur doloremque accusamus
+      tempore.
+    </p>
+
+    <p id="para10">
+      checking uppercase --> Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Quia, dolorem quam cum qui vero natus ad neque voluptates
+      consectetur, numquam corporis sunt libero, minima soluta sint tempore
+      dicta modi perspiciatis.
+    </p>
+    <p id="para11">
+      checking lowercase --> Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Quia, dolorem quam cum qui vero natus ad neque voluptates
+      consectetur, numquam corporis sunt libero, minima soluta sint tempore
+      dicta modi perspiciatis.
+    </p>
+    <p id="para12">
+      checking capitalize --> Lorem ipsum, dolor sit amet consectetur
+      adipisicing elit. Quia, dolorem quam cum qui vero natus ad neque
+      voluptates consectetur, numquam corporis sunt libero, minima soluta sint
+      tempore dicta modi perspiciatis.
+    </p>
+  </body>
+</html>
